@@ -49,7 +49,7 @@ function forEachStudent(doSomething){
 // First, open all the relation lists for the pertinent students.
 forEachStudent(function(contactElement){
   // We have to "click" this button to show the parents.
-  var relBtn = contactElement.querySelector('.hidden-mobile-card');
+  var relBtn = contactElement.querySelector('.user-relationships-initial') || contactElement.querySelector('.user-relationships-collapsed');
   // But not every contact card has this button available.
   if( relBtn ){
     // Click it to open that div if it's not already open
@@ -69,7 +69,7 @@ window.setTimeout(function(){
   forEachStudent(function(contactElement, name, year){
     var parents = [];
 
-    var relBtn = contactElement.querySelector('.hidden-mobile-card');
+    var relBtn = contactElement.querySelector('.user-relationships-expanded');
     if( relBtn ){
       // Use this number from the button's href to find the div containing the
       // actual parent/relation data.
