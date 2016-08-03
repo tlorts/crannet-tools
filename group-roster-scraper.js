@@ -62,7 +62,7 @@ forEachStudent(function(contactElement){
 
 // Now populate the student array, reading parent data if there
 var students = [];
-var maxNParents = 0;
+var maxNParents = 3;
 window.setTimeout(function(){
   document.body.style.background = '';
 
@@ -96,7 +96,7 @@ window.setTimeout(function(){
       parents: parents,
     });
 
-    maxNParents = Math.max(maxNParents, parents.length);
+    // maxNParents = Math.max(maxNParents, parents.length);
   });
 
   var SEP = '\t';
